@@ -110,7 +110,7 @@ def main():
                         currentHighlight.highlight()
             if event.type == pygame.KEYDOWN and event.key in theNumbers:
                 currentHighlight.change(theNumbers[event.key])
-                print "[ %s, %s ]" % currentHighlight.currentLoc()
+                print("[ %s, %s ]" % currentHighlight.currentLoc())
                 xLoc, yLoc = currentHighlight.currentLoc()
                 current.setNum(yLoc, xLoc, theNumbers[event.key])
                 current.printGrid()
