@@ -67,22 +67,22 @@ class SudokuGrid:
         
     def printGrid(self):
         """Provides a decent print for debugging at the console."""
-        print
+        print()
         for y in range(9):
             for x in range(9):
                 if x in (3, 6):
-                    print "|",
+                    print("|", end=' ')
                 temp = self.getNum(y, x)
                 if temp == None:
-                    print " ",
+                    print(" ", end=' ')
                 else:
-                    print temp,
+                    print(temp, end=' ')
             if y in (2, 5):
-                print
-                print "-" * 22
+                print()
+                print("-" * 22)
             else:
-                print
-        print
+                print()
+        print()
 
     def createGrid(self, genAmount=81, theSeed=None):
         """Use a simple method to generate a puzzle.
@@ -121,8 +121,8 @@ class SudokuGrid:
         
 
 if __name__ == "__main__":
-    print "Testing SudokuGrid functionality."
-    print "Create an empty grid..."
+    print("Testing SudokuGrid functionality.")
+    print("Create an empty grid...")
     sampleGrid = SudokuGrid()
     sampleGrid.printGrid()
     
@@ -157,12 +157,12 @@ if __name__ == "__main__":
     # print "Check square for nines...",
     # print sampleGrid.checkSquare(0, 0, 9)
     
-    print
-    print "Attempting to create a full solution..."
+    print()
+    print("Attempting to create a full solution...")
     sampleGrid.createGrid(81)
-    print
-    print
-    print "DONE!"
+    print()
+    print()
+    print("DONE!")
     sampleGrid.printGrid()
     
     # print
