@@ -9,8 +9,8 @@ def load_image(name):
             image = image.convert()
         else:
             image = image.convert_alpha()
-    except pygame.error, message:
-        print "Oops! Could not load image:", fullname
+    except pygame.error as message:
+        print("Oops! Could not load image:", fullname)
     return image, image.get_rect()
 
 
@@ -19,8 +19,8 @@ def load_sound(name):
     fullname = os.path.join("sounds", name)
     try:
         sound = pygame.mixer.Sound(fullname)
-    except pygame.error, message:
-        print "Oops! Could not load sound:", fullname
+    except pygame.error as message:
+        print("Oops! Could not load sound:", fullname)
     return sound
 
 
@@ -30,5 +30,5 @@ def load_music(name):
     try:
         pygame.mixer.music.load(fullname)
         pygame.mixer.music.play(-1, 0.0)
-    except pygame.error, message:
-        print "Oops! Could not load music:", fullname
+    except pygame.error as message:
+        print("Oops! Could not load music:", fullname)
